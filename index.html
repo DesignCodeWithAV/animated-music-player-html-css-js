@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Media Player UI</title>
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="moving-clouds"></div>
+  <div class="player" id="player">
+    
+    <div class="top-bar">
+      <button class="icon-btn" aria-label="Back">
+        <span class="material-symbols-rounded">keyboard_arrow_down</span>
+      </button>
+      <div class="center-text">NOW PLAYING</div>
+      <button class="icon-btn" aria-label="Menu">
+        <span class="material-symbols-rounded">more_vert</span>
+      </button>
+    </div>
+
+    <div class="album-wrap">
+      <svg class="progress-ring" viewBox="0 0 270 270">
+        <defs>
+          <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f8fbff" />
+            <stop offset="50%" stop-color="#bdd0ff" />
+            <stop offset="100%" stop-color="#7da2ff" />
+          </linearGradient>
+        </defs>
+        <circle class="progress-bg" cx="135" cy="135" r="120"></circle>
+        <circle class="progress" id="progressCircle" cx="135" cy="135" r="120"></circle>
+      </svg>
+
+      <div class="album-disc">
+        <img
+          id="cover"
+          src="audio/futuristic-sci-fi.jpg"
+          alt="Album cover"
+        />
+      </div>
+    </div>
+
+    <div class="song-info">
+      <h2 class="song-title" id="title">Ether Drift</h2>
+      <p class="song-artist" id="artist">Lumina Void</p>
+    </div>
+
+    <div class="time-row">
+      <span id="currentTime">0:00</span>
+      <span id="totalTime">0:00</span>
+    </div>
+
+    <div class="controls">
+      <button class="control-btn small" id="shuffleBtn" aria-label="Shuffle">
+        <span class="material-symbols-rounded">shuffle</span>
+      </button>
+
+      <button class="control-btn" id="prevBtn" aria-label="Previous">
+        <span class="material-symbols-rounded">skip_previous</span>
+      </button>
+
+      <button class="control-btn play-btn" id="playBtn" aria-label="Play Pause">
+        <span class="material-symbols-rounded" id="playIcon">play_arrow</span>
+      </button>
+
+      <button class="control-btn" id="nextBtn" aria-label="Next">
+        <span class="material-symbols-rounded">skip_next</span>
+      </button>
+
+      <button class="control-btn small" id="repeatBtn" aria-label="Repeat">
+        <span class="material-symbols-rounded">repeat</span>
+      </button>
+    </div>
+
+    <div class="equalizer">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <audio id="audio"></audio>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
